@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jev Presentations Dashboard</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <h2>Jev</h2>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active">
+                    <i class="ph ph-house"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="ph ph-presentation-chart"></i>
+                    <span>Presentations</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="ph ph-chart-bar"></i>
+                    <span>Analytics</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="ph ph-gear"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>Learn &bull; Create &bull; Grow</p>
+                <div class="wave-bg"></div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <p class="greeting">Welcome,</p>
+                    <h1>Explore My<br>Presentations</h1>
+                    <p class="subtitle">A collection of HTML presentations created<br>for my TA class.</p>
+                </div>
+                <div class="hero-illustration">
+                    <!-- Pure CSS illustration placeholder mimicking the image -->
+                    <div class="card-stack">
+                        <div class="card-bg card-1"></div>
+                        <div class="card-bg card-2"></div>
+                        <div class="card-front">
+                            <div class="img-placeholder"><i class="ph ph-image"></i></div>
+                            <div class="lines">
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Presentations Section -->
+            <section class="presentations-section">
+                <div class="section-header">
+                    <h2>My Presentations</h2>
+                    <div class="header-actions">
+                        <span class="count">6 presentations</span>
+                        <div class="search-bar">
+                            <i class="ph ph-magnifying-glass"></i>
+                            <input type="text" placeholder="Search presentations...">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="presentations-grid">
+                    <!-- Card 1 -->
+                    <article class="presentation-card" data-url="../Arraylist and arrays/Arrays/index.html">
+                        <div class="card-image bg-blue-1">
+                            <i class="ph-fill ph-file-text icon-top-left"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Arrays</h3>
+                            <p>Introduction to Arrays and their operations.</p>
+                            <div class="card-footer">
+                                <span><i class="ph ph-calendar-blank"></i> Apr 12, 2025</span>
+                                <span>&bull; 5 slides</span>
+                                <button class="go-btn"><i class="ph ph-caret-right"></i></button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="presentation-card" data-url="../Arraylist and arrays/ArrayList/index.html">
+                        <div class="card-image bg-blue-2">
+                            <i class="ph-fill ph-file-text icon-top-left"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>ArrayList</h3>
+                            <p>Dynamic arrays and their methods.</p>
+                            <div class="card-footer">
+                                <span><i class="ph ph-calendar-blank"></i> Apr 19, 2025</span>
+                                <span>&bull; 7 slides</span>
+                                <button class="go-btn"><i class="ph ph-caret-right"></i></button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="presentation-card">
+                        <div class="card-image bg-blue-3">
+                            <i class="ph-fill ph-file-text icon-top-left"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>JavaScript Basics</h3>
+                            <p>Variables, functions, and DOM.</p>
+                            <div class="card-footer">
+                                <span><i class="ph ph-calendar-blank"></i> Apr 26, 2025</span>
+                                <span>&bull; 6 slides</span>
+                                <button class="go-btn"><i class="ph ph-caret-right"></i></button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="presentation-card">
+                        <div class="card-image bg-blue-4">
+                            <i class="ph-fill ph-file-text icon-top-left"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Web Development Project</h3>
+                            <p>From idea to deployment.</p>
+                            <div class="card-footer">
+                                <span><i class="ph ph-calendar-blank"></i> May 3, 2025</span>
+                                <span>&bull; 8 slides</span>
+                                <button class="go-btn"><i class="ph ph-caret-right"></i></button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 5 -->
+                    <article class="presentation-card">
+                        <div class="card-image bg-blue-5">
+                            <i class="ph-fill ph-file-text icon-top-left"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Data Analysis Project</h3>
+                            <p>Data cleaning, visualization, insights.</p>
+                            <div class="card-footer">
+                                <span><i class="ph ph-calendar-blank"></i> May 10, 2025</span>
+                                <span>&bull; 10 slides</span>
+                                <button class="go-btn"><i class="ph ph-caret-right"></i></button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 6 -->
+                    <article class="presentation-card">
+                        <div class="card-image bg-blue-6">
+                            <i class="ph-fill ph-file-text icon-top-left"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Study Presentation</h3>
+                            <p>Key concepts and takeaways.</p>
+                            <div class="card-footer">
+                                <span><i class="ph ph-calendar-blank"></i> May 17, 2025</span>
+                                <span>&bull; 7 slides</span>
+                                <button class="go-btn"><i class="ph ph-caret-right"></i></button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <!-- Right Sidebar (Stats & Activity) -->
+        <aside class="right-sidebar">
+            <!-- Overview Stats -->
+            <section class="overview-section">
+                <h3>Overview</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="ph ph-file-text text-blue"></i>
+                        <h4>6</h4>
+                        <p>Total Presentations</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="ph ph-eye text-blue"></i>
+                        <h4>41</h4>
+                        <p>Total Views</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="ph ph-calendar-blank text-blue"></i>
+                        <h4>5</h4>
+                        <p>This Month</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="ph ph-share-network text-blue"></i>
+                        <h4>0</h4>
+                        <p>Shared Links</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Activity -->
+            <section class="activity-section">
+                <h3><i class="ph ph-clock"></i> Recent Activity</h3>
+                <ul class="activity-list">
+                    <li>
+                        <div class="activity-dot bg-blue"></div>
+                        <div class="activity-details">
+                            <p class="title">Study Presentation</p>
+                            <p class="time">Viewed &bull; 2 hours ago</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="activity-dot bg-light-blue"></div>
+                        <div class="activity-details">
+                            <p class="title">Web Development Project</p>
+                            <p class="time">Viewed &bull; 1 day ago</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="activity-dot bg-beige"></div>
+                        <div class="activity-details">
+                            <p class="title">Data Analysis Project</p>
+                            <p class="time">Viewed &bull; 2 days ago</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="activity-dot bg-blue"></div>
+                        <div class="activity-details">
+                            <p class="title">JavaScript Basics</p>
+                            <p class="time">Viewed &bull; 4 days ago</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="activity-dot bg-beige"></div>
+                        <div class="activity-details">
+                            <p class="title">CSS Fundamentals</p>
+                            <p class="time">Viewed &bull; 5 days ago</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="activity-dot bg-light-blue"></div>
+                        <div class="activity-details">
+                            <p class="title">Introduction to HTML</p>
+                            <p class="time">Viewed &bull; 6 days ago</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Bottom Quote -->
+            <div class="quote-card">
+                <p>Small steps<br><strong>build great things.</strong></p>
+                <div class="quote-line"></div>
+                <div class="quote-wave"></div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
