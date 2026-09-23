@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java ArrayLists Presentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="presentation-container">
+        <!-- Cover Slide -->
+        <div class="slide cover-slide">
+            <div class="cover-header">
+                <div class="logo-container"><div class="logo-icon"></div> Algorithm & Programming</div>
+                <div class="presentation-info cover-presented">
+                    Presented by :<br>
+                    Jev
+                </div>
+            </div>
+            <div class="cover-content">
+                <div class="cover-title-group">
+                    <h1 class="cover-title" style="font-size: 10rem;">ArrayLists.</h1>
+                    <div class="cover-subtitle">
+                        Java Concepts<br>
+                        Presentation
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 1 -->
+        <div class="slide">
+            <div class="slide-header">
+                <div class="logo-container"><div class="logo-icon"></div> Java Concepts</div>
+                <div class="presentation-info">Slide 1 / 15</div>
+            </div>
+            <h1>Java ArrayList</h1>
+            <div class="card-container">
+                <div class="card">
+                    <div class="step-indicator">?</div>
+                    <h3>What is an ArrayList?</h3>
+                    <ul>
+                        <li>A collection that can <strong>change size dynamically</strong></li>
+                        <li>Stores <strong>objects</strong></li>
+                        <li>Can add or remove elements</li>
+                        <li>Similar to an array, but <strong>resizable</strong></li>
+                    </ul>
+                </div>
+                <div class="card-light">
+                    <h3>Key Idea</h3>
+                    <blockquote>
+                        <strong>Array = Fixed Size</strong><br>
+                        <strong>ArrayList = Resizable</strong>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+            <div class="slide-header">
+                <div class="logo-container"><div class="logo-icon"></div> Java Concepts</div>
+                <div class="presentation-info">Slide 2 / 15</div>
+            </div>
+            <h2>Creating an ArrayList</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Syntax</h3>
+                    <p>First, import ArrayList:</p>
+                    <pre><code class="language-java">import java.util.ArrayList;</code></pre>
+                    <p>Create an ArrayList:</p>
+                    <pre><code class="language-java">ArrayList&lt;String&gt; fruits = new ArrayList&lt;&gt;();</code></pre>
+                </div>
+                <div class="card-light">
+                    <h3>Breakdown</h3>
+                    <ul>
+                        <li><code>ArrayList</code> → collection type</li>
+                        <li><code>&lt;String&gt;</code> → type of elements</li>
+                        <li><code>fruits</code> → ArrayList name</li>
+                        <li><code>new ArrayList&lt;&gt;()</code> → creates the ArrayList</li>
+                    </ul>
+                    <h3>Example</h3>
+                    <pre><code class="language-java">ArrayList&lt;Integer&gt; numbers = new ArrayList&lt;&gt;();</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+            <div class="slide-header">
+                <div class="logo-container"><div class="logo-icon"></div> Java Concepts</div>
+                <div class="presentation-info">Slide 3 / 15</div>
+            </div>
+            <h2>ArrayList & Data Types</h2>
+            <p>ArrayLists Store Objects. They use <strong>wrapper classes</strong> for primitive types.</p>
+            <div class="card-container">
+                <div class="card">
+                    <table>
+                        <tr><th>Primitive</th><th>Wrapper</th></tr>
+                        <tr><td><code>int</code></td><td><code>Integer</code></td></tr>
+                        <tr><td><code>double</code></td><td><code>Double</code></td></tr>
+                        <tr><td><code>boolean</code></td><td><code>Boolean</code></td></tr>
+                        <tr><td><code>char</code></td><td><code>Character</code></td></tr>
+                    </table>
+                </div>
+                <div class="card-light">
+                    <h3>Example:</h3>
+                    <pre><code class="language-java">ArrayList&lt;Integer&gt; numbers = new ArrayList&lt;&gt;();</code></pre>
+                    <blockquote>Java automatically converts between primitives and wrapper objects using <strong>autoboxing</strong>.</blockquote>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide">
+            <div class="slide-header">
+                <div class="logo-container"><div class="logo-icon"></div> Java Concepts</div>
+                <div class="presentation-info">Slide 4 / 15</div>
+            </div>
+            <h2>Adding Elements</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3><code>.add()</code></h3>
+                    <p>Use <code>.add()</code> to add an element.</p>
+                    <pre><code class="language-java">ArrayList&lt;String&gt; fruits = new ArrayList&lt;&gt;();
+
+fruits.add("Apple");
+fruits.add("Orange");
+fruits.add("Banana");</code></pre>
+                </div>
+                <div class="card-light">
+                    <h3>Result:</h3>
+                    <pre><code>[Apple, Orange, Banana]</code></pre>
+                    <h3>Key Point</h3>
+                    <blockquote>The ArrayList automatically <strong>grows</strong> when elements are added.</blockquote>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="slide">
+            <div class="slide-header">
+                <div class="logo-container"><div class="logo-icon"></div> Java Concepts</div>
+                <div class="presentation-info">Slide 5 / 15</div>
+            </div>
+            <h2>Accessing Elements</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3><code>.get()</code></h3>
+                    <p>Use <code>.get(index)</code> to access an element.</p>
+                    <pre><code class="language-java">System.out.println(fruits.get(0));
+// Output: Apple</code></pre>
+                </div>
+                <div class="card-light">
+                    <h3>Just like Arrays:</h3>
+                    <p><strong>Indexes start at 0</strong></p>
+                    <pre><code>Index:    0        1        2
+        Apple    Orange   Banana</code></pre>
+                    <pre><code class="language-java">fruits.get(1);</code></pre>
+                    <p>→ <code>Orange</code></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="slide">
+            <div class="slide-header">
+                <div class="logo-container"><div class="logo-icon"></div> Java Concepts</div>
+                <div class="presentation-info">Slide 6 / 15</div>
+            </div>
+            <h2>Changing Elements</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3><code>.set()</code></h3>
+                    <p>Use <code>.set(index, value)</code> to change an element.</p>
+                    <pre><code class="language-java">fruits.set(0, "Pineapple");</code></pre>
+                    <p>Before: <code>[Apple, Orange, Banana]</code></p>
+                    <p>After: <code>[Pineapple, Orange, Banana]</code></p>
+                </div>
+                <div class="card-light">
+                    <h3>Remember</h3>
+                    <pre><code>.get() → Get an element
+.set() → Change an element</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="slide">
+            <div class="slide-header">
+                <div class="logo-container"><div class="logo-icon"></div> Java Concepts</div>
+                <div class="presentation-info">Slide 7 / 15</div>
+            </div>
+            <h2>Removing Elements</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3><code>.remove()</code></h3>
+                    <p>Use <code>.remove(index)</code> to remove an element.</p>
+                    <pre><code class="language-java">fruits.remove(1);</code></pre>
+                    <p>Before: <code>[Apple, Orange, Banana]</code></p>
+                    <p>After: <code>[Apple, Banana]</code></p>
+                </div>
+                <div class="card-light" style="display: flex; flex-direction: column; justify-content: center;">
+                    <blockquote style="font-size: 1.2rem;">The ArrayList automatically <strong>adjusts its size</strong>.</blockquote>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8 -->
+        <div class="slide">
+            <div class="slide-header">
+                <div class="logo-container"><div class="logo-icon"></div> Java Concepts</div>
+                <div class="presentation-info">Slide 8 / 15</div>
+            </div>
+            <h2>Getting the Size</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3><code>.size()</code></h3>
+                    <p>Use <code>.size()</code> to find the number of elements.</p>
+                    <pre><code class="language-java">int numberOfFruits = fruits.size();</code></pre>
+                    <p>Example: <code>[Apple, Orange, Banana]</code></p>
+                    <p><code>fruits.size() → 3</code></p>
+                </div>
+                <div class="card-light">
+                    <h3>⚠️ Don't confuse:</h3>
+                    <pre><code>Array     → .length
+ArrayList → .size()</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9 -->
+        <div class="slide">
+            <div class="slide-header">
+                <div class="logo-container"><div class="logo-icon"></div> Java Concepts</div>
+                <div class="presentation-info">Slide 9 / 15</div>
+            </div>
+            <h2>Enhanced <code>for</code> Loop</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Iterating Through an ArrayList</h3>
+                    <pre><code class="language-java">for (String fruit : fruits) {
+    System.out.println(fruit);
+}</code></pre>
+                    <blockquote><strong>For every fruit in fruits, print the fruit.</strong></blockquote>
+                    <p>Output:<br>Apple<br>Orange<br>Banana</p>
+                </div>
+                <div class="card-light">
+                    <h3>Useful when:</h3>
+                    <ul>
+                        <li>You want to visit every element</li>
+                        <li>You don't need to manually use the index</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10 -->
+        <div class="slide">
+            <div class="slide-header">
+                <div class="logo-container"><div class="logo-icon"></div> Java Concepts</div>
+                <div class="presentation-info">Slide 10 / 15</div>
+            </div>
+            <h2>Sorting an ArrayList</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3><code>Collections.sort()</code></h3>
+                    <p>Import:</p>
+                    <pre><code class="language-java">import java.util.Collections;</code></pre>
+                    <p>Sort the ArrayList:</p>
+                    <pre><code class="language-java">Collections.sort(fruits);</code></pre>
+                </div>
+                <div class="card-light">
+                    <p>Before: <code>[Orange, Apple, Banana]</code></p>
+                    <p>After: <code>[Apple, Banana, Orange]</code></p>
+                    <h3>Remember</h3>
+                    <pre><code>Array     → Arrays.sort()
+ArrayList → Collections.sort()</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 11 -->
+        <div class="slide">
+            <div class="slide-header">
+                <div class="logo-container"><div class="logo-icon"></div> Java Concepts</div>
+                <div class="presentation-info">Slide 11 / 15</div>
+            </div>
+            <h2>ArrayList + User Input</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Example: Storing Food</h3>
+                    <p>An ArrayList is useful when the number of elements can change.</p>
+                    <pre><code class="language-java" style="font-size: 0.95rem;">ArrayList&lt;String&gt; foods = new ArrayList&lt;&gt;();
+
+Scanner scanner = new Scanner(System.in);
+System.out.print("How many foods? ");
+int numOfFood = scanner.nextInt();
+scanner.nextLine();
+
+for (int i = 1; i &lt;= numOfFood; i++) {
+    System.out.print("Enter food   " + i + ": ");
+    String food = scanner.nextLine();
+    foods.add(food);
+}</code></pre>
+                </div>
+                <div class="card-light">
+                    <h3>Example Output:</h3>
+                    <pre><code>How many foods? 3
+
+Food   1: Pizza
+Food   2: Burger
+Food   3: Taco
+
+[Pizza, Burger, Taco]</code></pre>
+                    <blockquote>Key Idea: User input → <code>.add()</code> → ArrayList</blockquote>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 12 -->
+        <div class="slide">
+            <div class="slide-header">
+                <div class="logo-container"><div class="logo-icon"></div> Java Concepts</div>
+                <div class="presentation-info">Slide 12 / 15</div>
+            </div>
+            <h2>Array vs ArrayList</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>What's the Difference?</h3>
+                    <table>
+                        <tr><th>Array</th><th>ArrayList</th></tr>
+                        <tr><td>Fixed size</td><td>Resizable</td></tr>
+                        <tr><td><code>array[i]</code></td><td><code>list.get(i)</code></td></tr>
+                        <tr><td><code>.length</code></td><td><code>.size()</code></td></tr>
+                        <tr><td><code>array[i] = value</code></td><td><code>list.set(i, value)</code></td></tr>
+                        <tr><td><code>Arrays.sort()</code></td><td><code>Collections.sort()</code></td></tr>
+                        <tr><td>Supports primitives</td><td>Stores objects</td></tr>
+                    </table>
+                </div>
+                <div class="card-light" style="display: flex; flex-direction: column; justify-content: center;">
+                    <h3>Simple Rule</h3>
+                    <blockquote style="font-size: 1.2rem;">
+                        <strong>Know the size → Array</strong><br>
+                        <strong>Size can change → ArrayList</strong>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 13 -->
+        <div class="slide">
+            <div class="slide-header">
+                <div class="logo-container"><div class="logo-icon"></div> Java Concepts</div>
+                <div class="presentation-info">Slide 13 / 15</div>
+            </div>
+            <h2>ArrayList Cheat Sheet</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Important Methods</h3>
+                    <pre><code class="language-java">.add()       // Add
+.remove()    // Remove
+.get()       // Access
+.set()       // Change
+.size()      // Number of elements</code></pre>
+                </div>
+                <div class="card-light">
+                    <h3>Example</h3>
+                    <pre><code class="language-java">ArrayList&lt;String&gt; fruits = new ArrayList&lt;&gt;();
+fruits.add("Apple");
+fruits.add("Banana");
+
+System.out.println(fruits.get(0));
+
+fruits.set(0, "Mango");
+fruits.remove(1);
+
+System.out.println(fruits.size());</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 14 -->
+        <div class="slide">
+            <div class="slide-header">
+                <div class="logo-container"><div class="logo-icon"></div> Java Concepts</div>
+                <div class="presentation-info">Slide 14 / 15</div>
+            </div>
+            <h2>Mini Challenge 🧠</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>What will this print?</h3>
+                    <pre><code class="language-java">ArrayList&lt;String&gt; fruits = new ArrayList&lt;&gt;();
+
+fruits.add("Apple");
+fruits.add("Banana");
+fruits.add("Mango");
+
+fruits.remove(1);
+
+System.out.println(fruits);</code></pre>
+                </div>
+                <div class="card-light">
+                    <ul style="list-style-type: none; padding: 0;">
+                        <li style="margin-bottom: 1rem;"><strong>A</strong> <code>[Apple, Banana, Mango]</code></li>
+                        <li style="margin-bottom: 1rem;"><strong>B</strong> <code>[Apple, Mango]</code></li>
+                        <li style="margin-bottom: 1rem;"><strong>C</strong> <code>[Banana, Mango]</code></li>
+                        <li style="margin-bottom: 1rem;"><strong>D</strong> <code>[Apple, Banana]</code></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 15 -->
+        <div class="slide">
+            <div class="slide-header">
+                <div class="logo-container"><div class="logo-icon"></div> Java Concepts</div>
+                <div class="presentation-info">Slide 15 / 15</div>
+            </div>
+            <h2>Mini Challenge - Answer 🎯</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>What will this print?</h3>
+                    <pre><code class="language-java">ArrayList&lt;String&gt; fruits = new ArrayList&lt;&gt;();
+
+fruits.add("Apple");
+fruits.add("Banana");
+fruits.add("Mango");
+
+fruits.remove(1);
+
+System.out.println(fruits);</code></pre>
+                </div>
+                <div class="card-light">
+                    <ul style="list-style-type: none; padding: 0;">
+                        <li style="margin-bottom: 1rem; opacity: 0.5;"><strong>A</strong> <code>[Apple, Banana, Mango]</code></li>
+                        <li style="margin-bottom: 1rem; color: #007bff; font-weight: bold; font-size: 1.5rem;"><strong>B</strong> <code>[Apple, Mango]</code></li>
+                        <li style="margin-bottom: 1rem; opacity: 0.5;"><strong>C</strong> <code>[Banana, Mango]</code></li>
+                        <li style="margin-bottom: 1rem; opacity: 0.5;"><strong>D</strong> <code>[Apple, Banana]</code></li>
+                    </ul>
+                    <blockquote style="margin-top: 1rem; font-size: 1.1rem;">
+                        <strong>Answer: B</strong><br>
+                        <code>remove(1)</code> removes the element at <strong>index 1</strong>.<br><br>
+                        <pre style="background:transparent; color:#333; box-shadow:none; padding:0;">Index:    0        1        2
+        Apple    Banana   Mango
+                   ↑
+                removed</pre>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="controls">
+        <button id="prevBtn" class="btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+            Prev
+        </button>
+        <button id="nextBtn" class="btn">
+            Next
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+    </div>
+    
+    <div class="progress-bar" id="progress-bar"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
